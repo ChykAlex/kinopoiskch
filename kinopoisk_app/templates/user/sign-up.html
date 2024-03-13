@@ -1,0 +1,20 @@
+{% extends '../base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<div class="movie-list">
+    <div class="container">
+        <h1>Sign Up</h1>
+        <div class="card">
+            <card-body>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button class="btn watch-button primary-button">Sign Up</button>
+                </form>
+            </card-body>
+        </div>
+    </div>
+</div>
+{% endblock %}
